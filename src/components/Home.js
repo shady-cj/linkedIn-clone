@@ -76,6 +76,8 @@ const Layout = styled.div`
     @media (max-width: 768px) {
         grid-template-areas: "leftside" "mainside" "rightside";
         grid-template-columns: auto;
+        width: 100%;
+        border: 3px solid black;
         justify-content: center;
         padding: 0 6px;
     }

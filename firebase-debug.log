@@ -1,0 +1,31 @@
+[debug] [2021-12-28T21:00:31.543Z] ----------------------------------------------------------------------
+[debug] [2021-12-28T21:00:31.547Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-12-28T21:00:31.548Z] CLI Version:   9.23.1
+[debug] [2021-12-28T21:00:31.548Z] Platform:      win32
+[debug] [2021-12-28T21:00:31.548Z] Node Version:  v14.17.4
+[debug] [2021-12-28T21:00:31.550Z] Time:          Tue Dec 28 2021 22:00:31 GMT+0100 (West Africa Standard Time)
+[debug] [2021-12-28T21:00:31.550Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-28T21:00:31.644Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-28T21:00:31.644Z] > authorizing via signed-in user (petersp2000@gmail.com)
+[debug] [2021-12-28T21:00:31.644Z] [iam] checking project shady-linkedin-clone for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-12-28T21:00:31.648Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/shady-linkedin-clone:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-12-28T21:00:37.800Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 28 Dec 2021 21:00:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1139","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-28T21:00:37.818Z] > refreshing access token with scopes: []
+[debug] [2021-12-28T21:00:37.820Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-28T21:00:38.761Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 28 Dec 2021 21:00:38 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-28T21:00:38.840Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shady-linkedin-clone [none]
+[debug] [2021-12-28T21:00:49.293Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/shady-linkedin-clone
+[debug] [2021-12-28T21:00:53.126Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/shady-linkedin-clone
+    at Client.doRequest (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:213:19)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Client.request (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:73:9)
+    at async C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:188:17
+[error] 
+[error] Error: Failed to get Firebase project shady-linkedin-clone. Please make sure the project exists and your account has permission to access it.
