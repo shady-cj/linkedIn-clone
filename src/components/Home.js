@@ -29,7 +29,7 @@ const Home = (props) => {
 };
 
 const Container = styled.div`
-    padding-top: 52px;
+    padding-top: 80px;
     max-width: 100%;
 `;
 
@@ -76,8 +76,8 @@ const Layout = styled.div`
     @media (max-width: 768px) {
         grid-template-areas: "leftside" "mainside" "rightside";
         grid-template-columns: auto;
-
-        padding: 0 5px;
+        text-align: center;
+        padding: 0 6px;
     }
 `;
 
