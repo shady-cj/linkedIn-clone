@@ -118,7 +118,7 @@ const Hero = styled.div`
         margin-top: 50px;
         font-size: 56px;
         color: #2977c9;
-        font-weight: 200;
+        font-weight: 600;
         line-height: 70px;
         @media (max-width: 768px) {
             margin-top: 0px;

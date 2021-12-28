@@ -162,7 +162,6 @@ const Mainside = () => {
 const Container = styled.div`
     grid-area: mainside;
     @media (max-width: 768px) {
-        
         width: 100%;
     }
 `;
@@ -322,6 +321,8 @@ const SocialCounts = styled.ul`
         font-size: 12px;
         button {
             display: flex;
+            background: transparent;
+            border: none;
         }
     }
 `;
