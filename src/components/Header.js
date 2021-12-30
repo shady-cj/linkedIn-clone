@@ -98,11 +98,11 @@ const Container = styled.div`
     background-color: white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     left: 0;
-
     position: fixed;
     top: 0;
     width: 100vw;
     z-index: 20;
+    padding: 2px 10px;
     @media (max-width: 768px) {
         padding: 14px 24px;
     }
@@ -110,6 +110,7 @@ const Container = styled.div`
 const Content = styled.div`
     display: flex;
     align-items: center;
+
     min-height: 100%;
     max-width: 1128px;
 `;
@@ -154,15 +155,14 @@ const SearchIcon = styled.div`
 `;
 const Nav = styled.nav`
     margin-left: auto;
-    overflow-x: auto;
-    overflow-y: hidden;
+
     display: block;
     @media (max-width: 768px) {
         position: fixed;
         left: 0;
         z-index: 6;
         bottom: 0;
-
+        margin-top: 10px;
         background-color: white;
         width: 100%;
     }
@@ -172,7 +172,7 @@ const NavListWrap = styled.ul`
     display: flex;
     list-style: none;
     flex-flow: row nowrap;
-    overflow-y: visible;
+
     .active {
         span:after {
             content: "";
@@ -184,6 +184,10 @@ const NavListWrap = styled.ul`
             transition: transform 0.2s ease-in-out;
             width: 100%;
         }
+    }
+    @media (max-width: 768px) {
+        justify-content: space-between;
+        align-items: center;
     }
 `;
 
@@ -226,11 +230,11 @@ const NavList = styled.li`
 `;
 const SignOut = styled.div`
     position: absolute;
-    top: 20px;
+    top: 44px;
     left: -2px;
     background: white;
     border-radius: 0 0 5px 5px;
-    width: 100px;
+    width: 90px;
     height: 40px;
     z-index: 50;
     transition: 0.3s ease-in-out;
@@ -238,15 +242,17 @@ const SignOut = styled.div`
     text-align: center;
     display: none;
 
-    /* @media (max-width: 768px) {
-        position: fixed;
-        top: 82.5%;
-        left: 64%;
-        
-    } */
+    @media (max-width: 768px) {
+        width: 85px;
+        top: -40px;
+        left: -21px;
+        border-radius: 5px 5px 0 0;
+    }
 `;
 const User = styled(NavList)`
     position: relative;
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
 
     a > img {
         width: 24px;
@@ -267,8 +273,11 @@ const User = styled(NavList)`
     }
 `;
 
-const Work = styled(User)`
+const Work = styled(NavList)`
     border-left: 1px solid rgba(0, 0, 0, 0.08);
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 export default Header;

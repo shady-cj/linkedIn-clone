@@ -120,7 +120,7 @@ const PostModal = ({ showModal, handleClick }) => {
                             <textarea
                                 value={editorText}
                                 onChange={(e) => setEditorText(e.target.value)}
-                                placeholder="What do you what to talk about?"
+                                placeholder="What do you want to talk about?"
                                 autoFocus={true}
                             ></textarea>
                             <UploadImage>
@@ -188,13 +188,7 @@ const PostModal = ({ showModal, handleClick }) => {
                             </AssetButton>
                         </ShareComment>
                         <PostButton
-                            disabled={
-                                editorText.length === 0
-                                    ? // ||
-                                      // shareVideo.length === 0 || shareImage.length === 0
-                                      true
-                                    : false
-                            }
+                            disabled={editorText.length > 0 ? false : true}
                             onClick={postArticle}
                         >
                             Post

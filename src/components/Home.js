@@ -77,9 +77,8 @@ const Layout = styled.div`
         grid-template-areas: "leftside" "mainside" "rightside";
         grid-template-columns: auto;
         width: 100%;
-        border: 3px solid black;
         justify-content: center;
-        padding: 0 14px;
+        padding: 0 6px;
     }
 `;
 
