@@ -49,7 +49,7 @@ const Header = () => {
                                 <span>Messaging</span>
                             </a>
                         </NavList>
-                        <NavList>
+                        <NavList className="notification">
                             <a>
                                 <img
                                     src="/images/nav-notifications.svg"
@@ -217,6 +217,11 @@ const NavList = styled.li`
         }
         @media (max-width: 768px) {
             min-width: 70px;
+        }
+    }
+    &.notification {
+        @media (max-width: 768px) {
+            display: none;
         }
     }
     &:hover,
